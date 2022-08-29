@@ -1,0 +1,25 @@
+---
+version: '3.7'
+
+services:
+  meugnon:
+    build: .
+    image: "meugnon-api:v0.1"
+    ports:
+      - "8000:8000"
+    environment:
+      - MATTERMOST_TOKENS= #TODO
+      - IMGUR_CLIENT_ID=   #TODO
+    networks:
+      - meugnon
+  test_mm:
+    image: mattermost/mattermost-preview
+    container_name: test_mm
+    ports:
+      - "8065:8065"
+    environment:
+      MM_SERVICESETTINGS_ENABLELOCALMODE: "true"
+    networks:
+      - meugnon
+networks:
+  meugnon:
