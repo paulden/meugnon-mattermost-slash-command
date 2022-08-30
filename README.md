@@ -1,5 +1,7 @@
 # Mattermost Meugnon slash command
 
+![fly.io deploy](https://github.com/paulden/meugnon-mattermost-slash-command/actions/workflows/main.yml/badge.svg)
+
 Simple Flask API returning meugnons links (courtesy of Imgur) to setup a Mattermost Slash command.
 
 ## Run locally
@@ -65,6 +67,5 @@ request URL to `http://meugnon-api_meugnon_1:8000` (rest is your choice).
 ## TODO
 
 - Tests
-- CI/CD
 - Filter out MP4 links (not previewed in Mattermost :( )
 - Build "cache" object with links to avoid useless calls to API
